@@ -1,0 +1,441 @@
+<!DocType html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="cleartype" content="on">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="keywords" content="jQuery.equalize equalize column heights jQuery plugin css javascript eustasy Labs">
+		<meta name="description" content="jQuery.equalize is a small jQuery Plugin to equalize the height of columns with a class within a containing group.">
+		<title>jQuery.equalize &nbsp;&middot;&nbsp; eustasy Labs</title>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic">
+		<style>
+/* $Grid */
+.section {
+	clear: both;
+	padding: 0;
+	margin: 1% 0;
+}
+.group:before, .group:after {
+	content: "";
+	display: table;
+}
+.group:after { clear: both; }
+.group { zoom: 1; }
+.col {
+	display: block;
+	float: left;
+	margin: 0;
+}
+
+.span_1_of_12 { width: 8.33%; }
+.span_1_of_11 { width: 9.09%; }
+.span_1_of_10 { width: 10%; }
+.span_1_of_9 { width: 11.11%; }
+.span_1_of_8 { width: 12.5%; }
+.span_1_of_7 { width: 14.28%; }
+.span_1_of_6,
+.span_2_of_12 { width: 16.66%; }
+.span_2_of_11 { width: 18.18%; }
+.span_1_of_5,
+.span_2_of_10 { width: 20%; }
+.span_2_of_9 { width: 22.22%; }
+.span_1_of_4,
+.span_2_of_8,
+.span_3_of_12 { width: 25%; }
+.span_3_of_11 { width: 27.27%; }
+.span_2_of_7 { width: 28.57%; }
+.span_3_of_10 { width: 30%; }
+.span_1_of_3,
+.span_2_of_6,
+.span_3_of_9,
+.span_4_of_12 { width: 33.33%; }
+.span_4_of_11 { width: 36.36%; }
+.span_3_of_8 { width: 37.5%; }
+.span_2_of_5,
+.span_4_of_10 { width: 40%; }
+.span_5_of_12 { width: 41.66%; }
+.span_3_of_7 { width: 42.85%; }
+.span_4_of_9 { width: 44.44%; }
+.span_5_of_11 { width: 45.45%; }
+.span_1_of_2,
+.span_2_of_4,
+.span_3_of_6,
+.span_4_of_8,
+.span_5_of_10,
+.span_6_of_12 { width: 50%; }
+.span_6_of_11 { width: 54.54%; }
+.span_5_of_9 { width: 55.55%; }
+.span_4_of_7 { width: 57.14%; }
+.span_7_of_12 { width: 58.33%; }
+.span_3_of_5,
+.span_6_of_10 { width: 60%; }
+.span_5_of_8 { width: 62.5%; }
+.span_7_of_11 { width: 63.63%; }
+.span_2_of_3,
+.span_4_of_6,
+.span_6_of_9,
+.span_8_of_12 { width: 66.66%; }
+.span_7_of_10 { width: 70%; }
+.span_5_of_7 { width: 71.42%; }
+.span_8_of_11 { width: 72.72%; }
+.span_3_of_4,
+.span_6_of_8,
+.span_9_of_12 { width: 75%; }
+.span_7_of_9 { width: 77.77%; }
+.span_4_of_5,
+.span_8_of_10 { width: 80%; }
+.span_9_of_11 { width: 81.81%; }
+.span_5_of_6,
+.span_10_of_12 { width: 83.33%; }
+.span_6_of_7 { width: 85.71%; }
+.span_7_of_8 { width: 87.5%; }
+.span_8_of_9 { width: 88.88%; }
+.span_9_of_10 { width: 90%; }
+.span_10_of_11 { width: 90.90%; }
+.span_11_of_12 { width: 91.66%; }
+.span_1_of_1 { width: 100%; }
+/* $Global */
+body {
+	margin: 0 auto;
+	padding: 0;
+	font: normal 1em/1.4 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	color: #333333;
+	text-align: center;
+	background: #222222;
+}
+html {
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: #2980b9;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%; }
+::-webkit-selection, ::-moz-selection, ::selection {
+	background: #2980b9;
+	color: #ffffff;
+	text-shadow: none;
+}
+#skiptomain { display: none; }
+#headcontainer,
+#maincontentcontainer,
+#footercontainer { width: 100%; }
+#headcontainer {
+	background: #444444;
+	margin: 3% 0 0;
+}
+#headcontainer img {
+	position: absolute;
+	right: 0;
+}
+header,
+#maincontent,
+footer {
+	clear: both;
+	width: 80%;
+	max-width: 92.3em;
+	margin: 0 auto !important;
+}
+header {
+	padding: 2% 0 3%;
+	position: relative;
+	color: #ffffff;
+	text-align: center;
+}
+#maincontent {
+	padding: 3% 0 7%;
+	color: #ffffff;
+	line-height: 1.5em;
+	position: relative;
+}
+footer {
+	padding: 1% 0 !important;
+	color: #999;
+}
+footer a:link, footer a:visited { color: #ccc; }
+footer a:hover { color: #fff; }
+footer ul { list-style: none; }
+@media only screen and (max-width:799px) {
+	.equalize { height: auto !important; }
+}
+/* $Fonts */
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+h1 {
+	font: 300 3em/2 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	color: #fff;
+}
+h2 {
+	font: 400 2em/1.6 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	color: #eee;
+}
+h3 {
+	font: 400 1.8em/1.6 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	color: #ddd;
+}
+h4 {
+	font: 400 1.2em/2 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	color: #ccc;
+}
+h5 {
+	font: 400 1.2em/2 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	color: #bbb;
+}
+h6 {
+	font: 400 1em/2 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+	color: #aaa;
+}
+a {
+	text-decoration: none;
+	color: #3498db;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+a:hover, a:active, a:focus {
+	color: #2980b9;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+a.inlink { color: #eeeeee; }
+a.inlink:hover, a.inlink:active, a.inlink:focus  { color: #3498db; }
+h1 a { color: #222; }
+h1 a:hover { color: #111; }
+h2 a { color: #333; }
+h2 a:hover { color: #222; }
+p { text-align: left; }
+.box {
+	padding: 2% 3%;
+	margin: 2% 3%;
+	border-radius: 3px;
+	text-align: center;
+	color: #ffffff !important;
+	background: #444444;
+}
+.box h1, .box h2, .box h3, .box h4, .box h5, .box h6 { color: #ffffff !important; }
+.box-like { margin: 2% 3%; }
+.download { background: #2980b9; }
+textarea {
+	background: transparent;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	resize: none;
+}
+		</style>
+	</head>
+	<body>
+		<div id="skiptomain"><a href="#maincontent">skip to main content</a></div>
+		<div id="headcontainer">
+			<a href="https://github.com/eustasy/jquery.equalize">
+				<img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="jQuery.equalize on GitHub">
+			</a>
+			<header>
+				<h1>jQuery.equalize</h1>
+				<h5>by eustasy</h5>
+			</header>
+		</div>
+		<div id="maincontentcontainer">
+			<div id="maincontent">
+				<div class="section group">
+					<div class="col span_1_of_5"><br></div>
+					<div class="col span_3_of_5">
+						<p class="box-like">jQuery.equalize is a small jQuery plugin to equalize the height of elements with the equalize class within groups, or the entire page. It is open-sourced by eustasy under the MIT License, and the minified version is only 1.8KB in size. You might want to take a look at the <a href="jquery.equalize.js">unminified version</a>.</p>
+						<h4>It looks something like this:</h4>
+						<div class="box">
+							<textarea>function e(){'use strict';$('.group').each(function(){var h=0;$('.equalize',this).css('height','auto');$('.equalize',this).each(function(){if($(this).height()>h)h=$(this).height()});$('.equalize',this).height(h)})}$(function(){'use strict';e()});window.onresize=function(){'use strict';e()}</textarea>
+						</div>
+						<h6><small>That's actually all one line, promise.</small></h6>
+						<div class="breaker"></div>
+						<a href="https://github.com/eustasy/jquery.equalize/archive/1.1.zip">
+							<div class="box download">
+								<h3>Check Version</h3>
+								<h6>You have v.1.2.</h6>
+							</div>
+						</a>
+					</div>
+					<div class="col span_1_of_5"><br></div>
+				</div>
+				<div class="breaker"></div>
+				<div class="section group">
+					<div class="col span_1_of_3">
+						<div class="box">
+							<h2>This Bit</h2>
+							<h3>is unequalized</h3>
+							<p>I can add loads of content here and make loads of whitespace to the right.</p>
+							<p class="faded">Color theory encompasses a multitude of definitions, concepts and design applications - enough to fill several encyclopedias. However, there are three basic categories of color theory that are logical and useful : The color wheel, color harmony, and the context of how colors are used.</p>
+							<p class="faded">Color theories create a logical structure for color. For example, if we have an assortment of fruits and vegetables, we can organize them by color and place them on a circle that shows the colors in relation to each other.</p>
+						</div>
+					</div>
+					<div class="col span_1_of_3">
+						<div class="box">
+							<h3>See how</h3>
+							<h4>messy this looks?</h4>
+						</div>
+					</div>
+					<div class="col span_1_of_3">
+						<div class="box">
+							<h4>almost like</h4>
+							<p>I was trying to give a designer a headache of magnificent proportions.</p>
+							<p class="faded">The kind that makes you hallucinate about riding a donkey at the beach, and the maw of a gigantic scorpion surfacing through the sand towards you, moving past to terrorism Blackpool.</p>
+							<p class="faded">Oh, wait, that was a Primeval episode.</p>
+						</div>
+					</div>
+				</div>
+				<div class="breaker"></div>
+				<div class="section group">
+					<div class="col span_1_of_3">
+						<div class="box equalize">
+							<h3>These columns are equalized</h3>
+							<p>Everything looks neater and easier to understand.</p>
+							<p class="faded">Color theory encompasses a multitude of definitions, concepts and design applications - enough to fill several encyclopedias. However, there are three basic categories of color theory that are logical and useful : The color wheel, color harmony, and the context of how colors are used.</p>
+							<p class="faded">Color theories create a logical structure for color. For example, if we have an assortment of fruits and vegetables, we can organize them by color and place them on a circle that shows the colors in relation to each other.</p>
+						</div>
+					</div>
+					<div class="col span_1_of_3">
+						<div class="box equalize">
+							<h3>See how</h3>
+							<h4>much better this looks?</h4>
+							<p>All of this was achieved by adding the equalize class within a group class.</p>
+						</div>
+					</div>
+					<div class="col span_1_of_3">
+						<div class="box equalize">
+							<h3>Designers Everywhere</h3>
+							<p>Will rejoice as things are pixel perfect.</p>
+							<p class="faded">The kind that makes you hallucinate about riding a donkey at the beach, and the maw of a gigantic scorpion surfacing through the sand towards you, moving past to terrorism Blackpool.</p>
+							<p class="faded">Oh, wait, that was a Primeval episode.</p>
+						</div>
+					</div>
+				</div>
+				<h4 class="box-like right">Try re-sizing the window!</h4>
+				<div class="breaker"></div>
+				<div class="section group">
+					<div class="col span_1_of_5"><br></div>
+					<div class="col span_3_of_5">
+						<h2 class="box-like">The Syntax</h2>
+						<p class="box-like">The syntax of jQuery.equalize is ridiculously simple, it uses the group class that is already utilized in many bootstraps, templates and boilerplates, and the equalize class to detect what elements it should be targeting. Don't forget to include a nice, recent version of jQuery and your copy of jQuery.equalize, or you can load it from Git (it's not on any CDNs i know of yet).</p>
+						<div class="box">
+
+
+
+<textarea>
+&lt;script src="//code.jquery.com/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.equalize.min.&gt;&lt;/script&gt;
+&lt;div class="group"&gt;
+	&lt;div class="equalize"&gt;&lt;/div&gt;
+	&lt;div class="equalize"&gt;&lt;/div&gt;
+	&lt;div class="equalize"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</textarea>
+
+
+
+						</div>
+						<h3 class="box-like">Nested </h3>
+						<p class="box-like">The equalized divs don't need to be directly below the group div, in fact, they don't even need to be divs. Anything that can have the height set via CSS will work fine. Note that it doesn't take padding into account, so that's up to you to handle how you will, either keeping them all the same or adding a div specifically for padding.</p>
+						<div class="box">
+
+
+
+<textarea>
+&lt;div class="section group"&gt;
+	&lt;div class="col span_1_of_3"&gt;
+		&lt;div class="box equalize"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="col span_1_of_3"&gt;
+		&lt;span class="equalize"&gt;What is this?&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="col span_1_of_3"&gt;
+		&lt;div class="h3 equalize"&gt;Spans and Headers?&lt;/h3&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</textarea>
+
+
+
+						</div>
+						<h3 class="box-like">What Not To Do, Sort Of</h3>
+						<p class="box-like">Here, there is a group within another group. This is actually okay, so long as you don't mind the equalized divs inside the second group expanding to match the first group, which they are technically a part of too.</p>
+						<div class="box">
+
+
+
+<textarea>
+&lt;div class="section group"&gt;
+	&lt;div class="col span_1_of_3"&gt;
+		&lt;div class="box equalize"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="col span_1_of_3"&gt;
+		&lt;div class="box equalize"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="col span_1_of_3"&gt;
+		&lt;div class="section group"&gt;
+			&lt;div class="col span_1_of_2"&gt;
+				&lt;div class="box equalize"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col span_1_of_2"&gt;
+				&lt;div class="box equalize"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</textarea>
+
+
+
+						</div>
+						<div class="breaker"></div>
+						<h2 class="box-like">Responsive CSS</h2>
+						<p class="box-like">This example shows a small snippet of CSS designed to force height back to automatic when the screen width is smaller than a set amount. This stops large empty spaces appearing on mobile devices. You can modify the width and any other variables to suit your needs.</p>
+						<div class="box">
+
+
+
+<textarea>
+@media only screen and (max-width:799px) {
+	.equalize { height: auto !important; }
+}
+</textarea>
+
+
+
+						</div>
+						<div class="breaker"></div>
+						<a href="https://github.com/eustasy/jquery.equalize/archive/1.1.zip">
+							<div class="box download">
+								<h3>Check Version</h3>
+								<h6>You have v.1.2.</h6>
+							</div>
+						</a>
+					</div>
+					<div class="col span_1_of_5"><br></div>
+				</div>
+			</div>
+		</div>
+		<div id="footercontainer">
+			<footer class="section group">
+				<div class="col span_5_of_8">
+					<p class="box-like left">Copyright &copy; 2013 eustasy Labs</p>
+				</div>
+				<div class="col span_1_of_8"><p class="box-like center"><a href="https://github.com/eustasy/jquery.equalize">GitHub</a></div>
+				<div class="col span_1_of_8"><p class="box-like center"><a href="https://github.com/eustasy/jquery.equalize/releases">Releases</a></p></div>
+				<div class="col span_1_of_8"><p class="box-like center"><a href="https://github.com/eustasy/jquery.equalize/blob/master/LICENSE">License (MIT)</a></div>
+			</footer>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://labs.eustasy.org/modernizr.min.js"></script>
+		<script src="jquery.equalize.min.js"></script>
+		<script src="http://labs.eustasy.org/jquery.autosize.min.js"></script>
+		<script>$(function(){$('textarea').autosize();});</script>
+		<script>$('textarea').one('click',function(){$(this).select();});</script>
+		<script>$('textarea').dblclick(function(){$(this).select();});</script>
+	</body>
+</html>
