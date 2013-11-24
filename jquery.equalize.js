@@ -19,9 +19,9 @@
 ////////////////////////////////////////////////////////
 
 function equalize(group, equalize) { // Define a new function
+	'use strict'; // Be strict
 	group = group || '.group'; // Set Group to Itself, OR .group
 	equalize = equalize || '.equalize'; // Set Equalize to Itself, OR .equalize
-	'use strict'; // Be strict
 	$('.group').each(function(){ // For each group class
 		var highestBox = 0; // Clear the highest height
 		$('.equalize', this).css('height', 'auto'); // Set all the equalize classes to auto
