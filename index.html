@@ -41,14 +41,14 @@
 						<p class="box-like">jQuery.equalize is a small jQuery plugin to equalize the height of elements with the equalize class within groups, or the entire page. It is open-sourced by eustasy under the MIT License, and the minified version is only 1.8KB in size. You might want to take a look at the <a href="jquery.equalize.js">unminified version</a> first though, if you want to understand what it is doing.</p>
 						<h4>It looks something like this.</h4>
 						<div class="box">
-							<textarea>function equalize(b,a){b=b||'.group';a=a||'.equalize';'use strict';$('.group').each(function(){var c=0;$('.equalize',this).css('height','auto');$('.equalize',this).each(function(){if($(this).innerHeight()>c){c=$(this).innerHeight()}});$('.equalize',this).innerHeight(c)})}</textarea>
+							<textarea>function equalize(g,e){g=g||'.group';e=e||'.equalize';$(g).each(function(){var g=0;$(e,this).css('height','auto');$(e,this).each(function(){if($(this).innerHeight()>g){g=$(this).innerHeight()}});$(e,this).innerHeight(g)})}</textarea>
 						</div>
 						<h6><small>That's actually all one line, promise.</small></h6>
 						<div class="breaker"></div>
-						<a href="https://github.com/eustasy/jquery.equalize/archive/1.2.zip">
+						<a href="https://github.com/eustasy/jquery.equalize/archive/1.3.zip">
 							<div class="box download">
 								<h3>Download</h3>
-								<h6>v.1.2 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 7.1 KB</h6>
+								<h6>v.1.3 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 6.3 KB</h6>
 							</div>
 						</a>
 					</div>
