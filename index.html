@@ -117,14 +117,7 @@
 
 
 
-<textarea>&lt;!--[if lt IE 9]&gt;
-	&lt;script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript"&gt;window.jQuery || document.write('&lt;script src="jquery-1.10.2.min.js"&gt;&lt;\/script&gt;');&lt;/script&gt;
-&lt;![endif]--&gt;
-&lt;!--[if IE 9]&gt;&lt;!--&gt;
-	&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;
-	&lt;script&gt;window.jQuery || document.write('&lt;script src="jquery-2.0.3.min.js"&gt;&lt;\/script&gt;');&lt;/script&gt;
-&lt;!--&lt;![endif]--&gt;
+<textarea>&lt;script src="jquery-1.10.2.min.js"&gt;&lt;/script&gt;
 &lt;script src="jquery.equalize.min.js&gt;&lt;/script&gt;
 &lt;script&gt;$(function(){equalize()});window.onresize=function(){equalize()}&lt;/script&gt;
 &lt;div class="group"&gt;
@@ -190,6 +183,28 @@
 
 
 						</div>
+						<h2 class="box-like">Custom Classes</h2>
+						<p class="box-like">Custom group and equalize classes can be passed quickly and simply without modifying the source files and breaking your upgradability.</p>
+						<div class="box">
+
+
+
+<textarea>&lt;script src="jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.equalize.min.js&gt;&lt;/script&gt;
+&lt;script&gt;
+	$(function(){
+		equalize('.some-strange-group','.equalize-me');
+	});
+	window.onresize=function(){
+		equalize('.some-strange-group','.equalize-me');
+	};
+&lt;/script&gt;
+&lt;div class="group"&gt;
+	&lt;div class="equalize"&gt;&lt;/div&gt;
+	&lt;div class="equalize"&gt;&lt;/div&gt;
+	&lt;div class="equalize"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</textarea>
 						<div class="breaker"></div>
 						<h2 class="box-like">Responsive CSS</h2>
 						<p class="box-like">This example shows a small snippet of CSS designed to force height back to automatic when the screen width is smaller than a set amount. This stops large empty spaces appearing on mobile devices. You can modify the width and any other variables to suit your needs.</p>
