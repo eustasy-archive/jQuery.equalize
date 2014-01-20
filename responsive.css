@@ -1,3 +1,5 @@
 @media only screen and (max-width:799px) {
-	.equalize { height: auto !important; }
+	.equalize {
+		height: auto !important;
+	}
 }
