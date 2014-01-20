@@ -14,7 +14,7 @@ function equalize(g,e){'use strict';g=g||'.group';e=e||'.equalize';$(g).each(fun
 
 Columns that are equalized look neater and are easier to understand. Equalized columns can be achieved by adding the equalize class within a group class. Designers eerywhere will rejoice as things are pixel perfect.
 
-##The Syntax
+### The Syntax
 The syntax of jQuery.equalize is ridiculously simple, it uses the group class that is already utilized in many bootstraps, templates and boilerplates, and the equalize class to detect what elements it should be targeting. Don't forget to include a nice, recent version of jQuery and your copy of jQuery.equalize, or you can load it from Git (it's not on any CDNs i know of yet).
 ```
 <script src="jquery-1.10.2.min.js"></script>
@@ -27,7 +27,7 @@ The syntax of jQuery.equalize is ridiculously simple, it uses the group class th
 </div>
 ```
 
-##Nested
+### Nested
 The equalized divs don't need to be directly below the group div, in fact, they don't even need to be divs. Anything that can have the height set via CSS will work fine. Note that it doesn't take padding into account, so that's up to you to handle how you will, either keeping them all the same or adding a div specifically for padding.
 ```
 <div class="section group">
@@ -43,7 +43,7 @@ The equalized divs don't need to be directly below the group div, in fact, they 
 </div>
 ```
 
-##What Not To Do, Sort Of
+### What Not To Do, Sort Of
 Here, there is a group within another group. This is actually okay, so long as you don't mind the equalized divs inside the second group expanding to match the first group, which they are technically a part of too.
 ```
 <div class="section group">
@@ -66,7 +66,7 @@ Here, there is a group within another group. This is actually okay, so long as y
 </div>
 ```
 
-##Custom Classes
+### Custom Classes
 Custom group and equalize classes can be passed quickly and simply without modifying the source files and breaking your upgradability.
 ```
 <script src="jquery-1.10.2.min.js"></script>
@@ -86,7 +86,7 @@ Custom group and equalize classes can be passed quickly and simply without modif
 </div>
 ```
 
-##Responsive CSS
+### Responsive CSS
 This example shows a small snippet of CSS designed to force height back to automatic when the screen width is smaller than a set amount. This stops large empty spaces appearing on mobile devices. You can modify the width and any other variables to suit your needs.
 ```
 @media only screen and (max-width:799px) {
