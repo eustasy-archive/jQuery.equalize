@@ -1,5 +1,5 @@
-jQuery.equalize 1.7
-===================
+[jQuery.equalize 1.7](https://github.com/eustasy/jquery.equalize)
+=====================
 
 ###### *A small jQuery plugin to equalize the height of elements within groups, or the entire page.*
 
