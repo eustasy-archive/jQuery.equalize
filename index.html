@@ -38,17 +38,17 @@
 				<div class="section group">
 					<div class="col span_1_of_5"><br></div>
 					<div class="col span_3_of_5">
-						<p class="box-like">jQuery.equalize is a small jQuery plugin to equalize the height of elements with the equalize class within groups, or the entire page. It is open-sourced by eustasy under the MIT License, and the minified version is only 1.8KB in size. You might want to take a look at the <a href="jquery.equalize.js">unminified version</a> first though, if you want to understand what it is doing.</p>
+						<p class="box-like">jQuery.equalize is a small jQuery plugin to equalize the height of elements with the equalize class within groups, or the entire page. It is open-sourced by eustasy under the MIT License, and the minified version is less than 1 KB in size. That's small enough to inline into each page you want it on, or add it in to any existing script files. You might want to take a look at the <a href="jquery.equalize.js">unminified version</a> if you want to understand what it is doing.</p>
 						<h4>It looks something like this.</h4>
 						<div class="box">
-							<textarea>function equalize(g,e){g=g||'.group';e=e||'.equalize';$(g).each(function(){var g=0;$(e,this).css('height','auto');$(e,this).each(function(){if($(this).innerHeight()>g){g=$(this).innerHeight()}});$(e,this).innerHeight(g)})}</textarea>
+							<textarea>function equalize(g,e){'use strict';g=g||'.group';e=e||'.equalize';$(g).each(function(){var h=0;$(e,this).css('height','auto');$(e,this).each(function(){if($(this).innerHeight()>h){h=$(this).innerHeight()}});$(e,this).innerHeight(h)})}</textarea>
 						</div>
 						<h6><small>That's actually all one line, promise.</small></h6>
 						<div class="breaker"></div>
-						<a href="https://github.com/eustasy/jquery.equalize/archive/1.4.zip">
+						<a href="https://github.com/eustasy/jquery.equalize/archive/1.5.zip">
 							<div class="box download">
 								<h3>Download</h3>
-								<h6>v.1.4 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 6.3 KB</h6>
+								<h6>v.1.5 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 6 KB</h6>
 							</div>
 						</a>
 					</div>
@@ -226,7 +226,7 @@
 						<a href="https://github.com/eustasy/jquery.equalize/archive/1.4.zip">
 							<div class="box download">
 								<h3>Download</h3>
-								<h6>v.1.4 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 7.1 KB</h6>
+								<h6>v.1.5 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 7 KB</h6>
 							</div>
 						</a>
 					</div>
@@ -237,7 +237,7 @@
 		<div id="footercontainer">
 			<footer class="section group">
 				<div class="col span_5_of_8">
-					<p class="box-like left">Copyright &copy; <?php echo date('Y');?> eustasy Labs</p>
+					<p class="box-like left">Copyright &copy; 2014 eustasy Labs</p>
 				</div>
 				<div class="col span_1_of_8"><p class="box-like center"><a href="https://github.com/eustasy/jquery.equalize">GitHub</a></div>
 				<div class="col span_1_of_8"><p class="box-like center"><a href="https://github.com/eustasy/jquery.equalize/releases">Releases</a></p></div>

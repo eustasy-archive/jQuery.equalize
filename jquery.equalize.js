@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////
 ////////                                        ////////
 ////////            jQuery Equalize             ////////
-////////                 v.1.4                  ////////
+////////                 v.1.5                  ////////
 ////////                                        ////////
 ////////////////////////////////////////////////////////
 //                                                    //
@@ -27,10 +27,10 @@ function equalize(group, equalize) { // Define a new function
 		$(equalize, this).css('height', 'auto'); // Set all the equalize classes to auto
 		$(equalize, this).each(function(){ // For each equalize class
 			if($(this).innerHeight() > highestBox) { // If it's height is bigger than the highest height
-				highestBox = $(this).innerHeight(); // it's the new heighest
+				highestBox = $(this).innerHeight(); // it's the new highest
 			}
 		}); // Finshed with this group?
-		$(equalize,this).innerHeight(highestBox); // Set them to all be the heighest
+		$(equalize,this).innerHeight(highestBox); // Set them to all be the highest
 	}); // Start again, or finished with all the groups?
 } // Finish defining the function
 
