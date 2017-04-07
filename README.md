@@ -18,7 +18,7 @@ Columns that are equalized look neater and are easier to understand. Equalized c
 The syntax of jQuery.equalize is ridiculously simple, it uses the group class that is already utilized in many bootstraps, templates and boilerplates, and the equalize class to detect what elements it should be targeting. Don't forget to include a nice, recent version of jQuery and your copy of jQuery.equalize, or you can load it from Git (it's not on any CDNs i know of yet).
 ```
 <script src="jquery.min.js"></script>
-<script src="jQuery.equalize.min.js></script>
+<script src="jquery.equalize.min.js></script>
 <script>$(function(){equalize()});window.onresize=function(){equalize()}</script>
 <div class="group">
 	<div class="equalize"></div>
@@ -70,7 +70,7 @@ Here, there is a group within another group. This is actually okay, so long as y
 Custom group and equalize classes can be passed quickly and simply without modifying the source files and breaking your upgradability.
 ```
 <script src="jquery.min.js"></script>
-<script src="jQuery.equalize.min.js></script>
+<script src="jquery.equalize.min.js></script>
 <script>
 	$(function(){
 		equalize('.some-strange-group','.equalize-me');

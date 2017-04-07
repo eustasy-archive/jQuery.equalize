@@ -100,7 +100,7 @@
 			</div>
 			<div class="whole smablet-half">
 <textarea class="code rounded">&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="jQuery.equalize.min.js&gt;&lt;/script&gt;
+&lt;script src="jquery.equalize.min.js&gt;&lt;/script&gt;
 &lt;script&gt;$(function(){equalize()});window.onresize=function(){equalize()}&lt;/script&gt;
 &lt;div class="group"&gt;
 	&lt;div class="equalize"&gt;&lt;/div&gt;
@@ -164,7 +164,7 @@
 			</div>
 			<div class="whole smablet-half">
 <textarea class="code rounded">&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="jQuery.equalize.min.js&gt;&lt;/script&gt;
+&lt;script src="jquery.equalize.min.js&gt;&lt;/script&gt;
 &lt;script&gt;
 	$(function(){
 		equalize('.some-strange-group','.equalize-me');
@@ -215,13 +215,13 @@
 
 		<script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
 
-		<script src="jQuery.equalize.js"></script>
-		<script>$(function(){equalize()});window.onresize=function(){equalize()}</script>
-
 		<script src="https://cdn.jsdelivr.net/jquery.autosize/3.0.20/autosize.min.js"></script>
 		<script>$(function(){autosize($('textarea'));});</script>
 		<script>$('textarea').one('click',function(){$(this).select();});</script>
 		<script>$('textarea').dblclick(function(){$(this).select();});</script>
+
+		<script src="jquery.equalize.js"></script>
+		<script>$(function(){equalize()});window.onresize=function(){equalize()}</script>
 
 	</body>
 </html>
