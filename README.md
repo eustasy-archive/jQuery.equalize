@@ -17,7 +17,7 @@ Columns that are equalized look neater and are easier to understand. Equalized c
 ### The Syntax
 The syntax of jQuery.equalize is ridiculously simple, it uses the group class that is already utilized in many bootstraps, templates and boilerplates, and the equalize class to detect what elements it should be targeting. Don't forget to include a nice, recent version of jQuery and your copy of jQuery.equalize, or you can load it from Git (it's not on any CDNs i know of yet).
 ```
-<script src="jquery-1.10.2.min.js"></script>
+<script src="jquery.min.js"></script>
 <script src="jquery.equalize.min.js></script>
 <script>$(function(){equalize()});window.onresize=function(){equalize()}</script>
 <div class="group">
@@ -30,15 +30,15 @@ The syntax of jQuery.equalize is ridiculously simple, it uses the group class th
 ### Nested
 The equalized divs don't need to be directly below the group div, in fact, they don't even need to be divs. Anything that can have the height set via CSS will work fine. Note that it doesn't take padding into account, so that's up to you to handle how you will, either keeping them all the same or adding a div specifically for padding.
 ```
-<div class="section group">
-	<div class="col span_1_of_3">
-		<div class="box equalize"></div>
+<div class="whole grid group">
+	<div class="whole smablet-third equalize">
+		Div elements…
 	</div>
-	<div class="col span_1_of_3">
-		<span class="equalize">What is this?</span>
+	<div class="whole smablet-third">
+		<h2 class="equalize">Headers</h2>
 	</div>
-	<div class="col span_1_of_3">
-		<div class="h3 equalize">Spans and Headers?</h3>
+	<div class="whole smablet-third">
+		<span class="equalize">Inline elements</span>
 	</div>
 </div>
 ```
@@ -46,19 +46,19 @@ The equalized divs don't need to be directly below the group div, in fact, they 
 ### What Not To Do, Sort Of
 Here, there is a group within another group. This is actually okay, so long as you don't mind the equalized divs inside the second group expanding to match the first group, which they are technically a part of too.
 ```
-<div class="section group">
-	<div class="col span_1_of_3">
+<div class="whole grid group">
+	<div class="whole smablet-third">
 		<div class="box equalize"></div>
 	</div>
-	<div class="col span_1_of_3">
+	<div class="whole smablet-third">
 		<div class="box equalize"></div>
 	</div>
-	<div class="col span_1_of_3">
-		<div class="section group">
-			<div class="col span_1_of_2">
+	<div class="whole smablet-third">
+		<div class="whole grid group">
+			<div class="whole smablet-half">
 				<div class="box equalize"></div>
 			</div>
-			<div class="col span_1_of_2">
+			<div class="whole smablet-half">
 				<div class="box equalize"></div>
 			</div>
 		</div>
@@ -69,7 +69,7 @@ Here, there is a group within another group. This is actually okay, so long as y
 ### Custom Classes
 Custom group and equalize classes can be passed quickly and simply without modifying the source files and breaking your upgradability.
 ```
-<script src="jquery-1.10.2.min.js"></script>
+<script src="jquery.min.js"></script>
 <script src="jquery.equalize.min.js></script>
 <script>
 	$(function(){
