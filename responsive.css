@@ -1,5 +1,5 @@
- /* stylelint-disable declaration-no-important */
- @media only screen and ( max-width: 799px ) {
+/* stylelint-disable declaration-no-important */
+@media only screen and ( max-width: 799px ) {
 	.equalize {
 		height: auto !important;
 	}
