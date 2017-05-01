@@ -18,6 +18,8 @@
 //                                                    //
 ////////////////////////////////////////////////////////
 
+/*global $*/
+
 function equalize(group, equalize) { // Define a new function
 	'use strict' // Be strict
 	group = group || '.group' // Set Group to Itself, OR .group
