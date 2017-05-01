@@ -19,27 +19,27 @@
 ////////////////////////////////////////////////////////
 
 function equalize(group, equalize) { // Define a new function
-	'use strict'; // Be strict
-	group = group || '.group'; // Set Group to Itself, OR .group
-	equalize = equalize || '.equalize'; // Set Equalize to Itself, OR .equalize
+	'use strict' // Be strict
+	group = group || '.group' // Set Group to Itself, OR .group
+	equalize = equalize || '.equalize' // Set Equalize to Itself, OR .equalize
 	$(group).each(function(){ // For each group class
-		var highestBox = 0; // Clear the highest height
-		$(equalize, this).css('height', 'auto'); // Set all the equalize classes to auto
+		var highestBox = 0 // Clear the highest height
+		$(equalize, this).css('height', 'auto') // Set all the equalize classes to auto
 		$(equalize, this).each(function(){ // For each equalize class
 			if($(this).innerHeight() > highestBox) { // If it's height is bigger than the highest height
-				highestBox = $(this).innerHeight(); // it's the new highest
+				highestBox = $(this).innerHeight() // it's the new highest
 			}
-		}); // Finshed with this group?
-		$(equalize,this).innerHeight(highestBox); // Set them to all be the highest
-	}); // Start again, or finished with all the groups?
+		}) // Finshed with this group?
+		$(equalize,this).innerHeight(highestBox) // Set them to all be the highest
+	}) // Start again, or finished with all the groups?
 } // Finish defining the function
 
 $(function(){ // When the page has loaded
-	'use strict'; // You should always be strict
-	equalize(); // Run the function 
-}); 
+	'use strict' // You should always be strict
+	equalize() // Run the function
+})
 
 window.onresize = function() { // And every time the window is resized
-	'use strict'; // Always
-	equalize(); // Here we go again
-}; 
+	'use strict' // Always
+	equalize() // Here we go again
+}
