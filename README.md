@@ -6,6 +6,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d0f5f1050084e9bbb49c2b3f3aabbae)](https://www.codacy.com/app/lewisgoddard/jQuery.equalize?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eustasy/jQuery.equalize&amp;utm_campaign=Badge_Grade)
 [![Code Climate](https://codeclimate.com/github/eustasy/jquery.equalize/badges/gpa.svg)](https://codeclimate.com/github/eustasy/jquery.equalize)
 [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=231487)](https://www.bountysource.com/teams/eustasy/issues?tracker_ids=231487)
+[![jsDelivr](https://data.jsdelivr.com/v1/package/gh/eustasy/jQuery.equalize/badge?style=rounded)](https://www.jsdelivr.com/package/gh/eustasy/jQuery.equalize)
 
 jQuery.equalize is a small jQuery plugin to equalize the height of elements with the equalize class within groups, or the entire page. It is open-sourced by eustasy under the MIT License, and the minified version is less than 1 KB in size. That's small enough to inline into each page you want it on, or add it in to any existing script files. You might want to take a look at the unminified version if you want to understand what it is doing.
 
