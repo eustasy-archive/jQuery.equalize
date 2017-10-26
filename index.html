@@ -42,10 +42,10 @@
 				<p class="text-left">jQuery.equalize is a small jQuery plugin to equalize the height of elements with the equalize class within groups, or the entire page. It is open-sourced by eustasy under the MIT License, and the minified version is less than 1 KB in size. That's small enough to inline into each page you want it on, or add it in to any existing script files. You might want to take a look at the <a href="jquery.equalize.js">unminified version</a> if you want to understand what it is doing.</p>
 				<p class="text-right bold">It looks something like this:</p>
 				<p>
-					<a class="button rounded display-inline-block background-white color-belize-hole" href="https://github.com/eustasy/jQuery.equalize/archive/1.7.zip">Download</a>
+					<a class="button rounded display-inline-block background-white color-belize-hole" href="https://www.jsdelivr.com/package/gh/eustasy/jQuery.equalize">CDN Delivery</a>
 					<a class="button rounded display-inline-block background-white color-belize-hole" href="https://github.com/eustasy/jQuery.equalize">GitHub</a>
 				</p>
-				<h6>v.1.7 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 6 KB</h6>
+				<h6>v.1.8 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 6 KB</h6>
 			</div>
 			<div class="whole smablet-half">
 				<textarea class="code rounded" rows="6">function equalize(g,e){'use strict';g=g||'.group';e=e||'.equalize';$(g).each(function(){var h=0;$(e,this).css('height','auto');$(e,this).each(function(){if($(this).innerHeight()>h){h=$(this).innerHeight()}});$(e,this).innerHeight(h)})}</textarea>
@@ -198,10 +198,10 @@
 		<section class="whole grid">
 			<h2>jQuery.equalize</h2>
 			<p>
-				<a class="button rounded display-inline-block background-white color-belize-hole" href="https://github.com/eustasy/jQuery.equalize/archive/1.7.zip">Download</a>
+				<a class="button rounded display-inline-block background-white color-belize-hole" href="https://www.jsdelivr.com/package/gh/eustasy/jQuery.equalize">CDN Delivery</a>
 				<a class="button rounded display-inline-block background-white color-belize-hole" href="https://github.com/eustasy/jQuery.equalize">GitHub</a>
 			</p>
-			<h6>v.1.7 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 6 KB</h6>
+			<h6>v.1.8 &nbsp;&middot;&nbsp; Zip &nbsp;&middot;&nbsp; 6 KB</h6>
 		</section>
 		<hr class="section-breaker">
 
@@ -213,10 +213,11 @@
 			</p>
 		</footer>
 
-		<script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js"></script>
 
-		<script src="https://cdn.jsdelivr.net/jquery.autosize/3.0.20/autosize.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/jackmoore/autosize@4/dist/autosize.min.js"></script>
 		<script>$(function(){autosize($('textarea'));});</script>
+		
 		<script>$('textarea').one('click',function(){$(this).select();});</script>
 		<script>$('textarea').dblclick(function(){$(this).select();});</script>
 
