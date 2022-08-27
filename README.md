@@ -4,6 +4,7 @@
 
 ###### *A small jQuery plugin to equalize the height of elements within groups, or the entire page.*
 
+[![Normal](https://github.com/eustasy/jQuery.equalize/actions/workflows/normal.yml/badge.svg)](https://github.com/eustasy/jQuery.equalize/actions/workflows/normal.yml)
 [![Code Climate](https://codeclimate.com/github/eustasy/jquery.equalize/badges/gpa.svg)](https://codeclimate.com/github/eustasy/jquery.equalize)
 [![jsDelivr](https://data.jsdelivr.com/v1/package/gh/eustasy/jQuery.equalize/badge?style=rounded)](https://www.jsdelivr.com/package/gh/eustasy/jQuery.equalize)
 
