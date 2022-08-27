@@ -1,5 +1,7 @@
 # [jQuery.equalize 1.8](https://github.com/eustasy/jQuery.equalize)
 
+#### Deprecated: You should probably be using [Flexbox](https://web.dev/learn/css/flexbox/) or [Grid](https://learncssgrid.com/) in CSS instead. 
+
 ###### *A small jQuery plugin to equalize the height of elements within groups, or the entire page.*
 
 [![Code Climate](https://codeclimate.com/github/eustasy/jquery.equalize/badges/gpa.svg)](https://codeclimate.com/github/eustasy/jquery.equalize)
