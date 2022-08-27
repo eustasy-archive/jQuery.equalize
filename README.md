@@ -1,4 +1,4 @@
-# [jQuery.equalize 1.8](https://github.com/eustasy/jQuery.equalize)
+# jQuery.equalize 1.8
 
 #### Deprecated: You should probably be using [Flexbox](https://web.dev/learn/css/flexbox/) or [Grid](https://learncssgrid.com/) in CSS instead. 
 
